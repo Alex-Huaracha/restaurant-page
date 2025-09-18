@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Montserrat:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -20,7 +21,6 @@ body {
   width: 70vw;
   display: flex;
   border-radius: 10px;
-  border: 2px solid #b3b3b3;
   background: #1c1a1a;
 }
 
@@ -39,6 +39,12 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 2;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 header nav {
@@ -72,7 +78,7 @@ nav button.active {
 #content {
   flex: 1;
   padding: 40px;
-  overflow-y: auto;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -243,4 +249,84 @@ textarea:focus {
   font-size: 16px;
   border-radius: 5px;
   transition: background 0.3s ease;
+}
+
+.menu-blur::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(8px) brightness(0.7);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.menu-split {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.menu-img-side {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.menu-img-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.menu-text-side {
+  flex: 1.2;
+  background: rgba(227, 227, 227, 0.75);
+  color: #3a2d1a;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: 'Montserrat', Arial, sans-serif;
+  box-shadow: -4px 0 24px 0 rgba(0, 0, 0, 0.08);
+}
+
+.menu-text-side h2 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2.2rem;
+  color: #a67c52;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+}
+
+.menu-text-side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-text-side li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #e0d6c3;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.menu-text-side li span {
+  font-style: italic;
+  font-weight: bold;
+  color: #a67c52;
+  margin-left: 12px;
 }
