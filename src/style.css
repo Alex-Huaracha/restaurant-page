@@ -29,7 +29,6 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  z-index: 1;
 }
 
 header {
@@ -40,7 +39,6 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 2;
 }
 
 header nav {
@@ -122,4 +120,127 @@ nav button.active {
   height: 35px;
   cursor: pointer;
   filter: invert(1);
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: 80%;
+  width: 100%;
+  color: white;
+  text-align: center;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contact-content h1 {
+  font-size: 35px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #ff8800;
+}
+
+.contact-content p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.contact-content p:first-of-type {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contact-content p:nth-of-type(2) {
+  font-size: 1rem;
+}
+
+.info-form-group {
+  display: flex;
+  justify-content: center;
+}
+
+.info-col,
+.form-col {
+  flex: 1;
+  padding: 20px;
+}
+
+.info-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+  text-align: left;
+}
+
+.info-col p:first-of-type {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.form-group-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.form-group-row input {
+  flex: 1;
+}
+
+.form-col input,
+textarea {
+  background: transparent;
+  color: white;
+  font-size: 0.8rem;
+  border: 1px solid #b3b3b3;
+  padding: 8px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.form-col input::placeholder,
+textarea::placeholder {
+  color: #dcdada;
+}
+
+.form-col input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #ff8800;
+}
+
+.form-col textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 200px;
+  width: 100%;
+}
+
+.form-col button {
+  background: #ff8800;
+  color: rgb(14, 14, 14);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
