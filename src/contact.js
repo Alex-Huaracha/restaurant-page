@@ -14,6 +14,7 @@ function loadContact() {
   content.innerHTML = '';
 
   const container = document.querySelector('.container');
+  container.classList.remove('menu-blur');
   container.style.backgroundImage = `url(${contactImg})`;
   container.style.backgroundSize = 'cover';
   container.style.backgroundPosition = 'center';

@@ -1,4 +1,4 @@
-import restaurantImg from './assets/images/restaurant.jpg';
+import restaurantImg from './assets/images/home-image.jpg';
 import instagramAsset from './assets/icons/instagram.svg';
 import tiktokIconAsset from './assets/icons/tiktok.svg';
 
@@ -14,6 +14,7 @@ function loadHome() {
   content.innerHTML = '';
 
   const container = document.querySelector('.container');
+  container.classList.remove('menu-blur');
   container.style.backgroundImage = `url(${restaurantImg})`;
   container.style.backgroundSize = 'cover';
   container.style.backgroundPosition = 'center';
