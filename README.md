@@ -33,3 +33,9 @@ To build for production:
 ```
 npx webpack
 ```
+
+### Image Credits
+
+- Home image: Photo by [Cátia Matos](https://www.pexels.com/@catiamatos/) on [Pexels](https://www.pexels.com/)
+- Menu image: Photo by [Desativado](https://www.pexels.com/@igrejapreta/) on [Pexels](https://www.pexels.com/)
+- Contact image: Photo by [Igor Starkov](https://www.pexels.com/@igor-starkov-233202/) on [Pexels](https://www.pexels.com/)
